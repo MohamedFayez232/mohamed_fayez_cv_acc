@@ -225,3 +225,135 @@ section h2{
 }
 
 }
+
+/* ==========================
+Animation
+========================== */
+
+.card{
+
+opacity:0;
+
+transform:translateY(40px);
+
+transition:.6s;
+
+}
+
+.card.show{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+/* ==========================
+Top Button
+========================== */
+
+#topBtn{
+
+position:fixed;
+
+bottom:25px;
+
+left:25px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:#2563eb;
+
+color:white;
+
+font-size:22px;
+
+cursor:pointer;
+
+display:none;
+
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+
+transition:.3s;
+
+}
+
+#topBtn:hover{
+
+transform:scale(1.1);
+
+}
+
+/* ==========================
+Dark Mode Button
+========================== */
+
+#darkMode{
+
+position:fixed;
+
+top:20px;
+
+left:20px;
+
+width:50px;
+
+height:50px;
+
+border:none;
+
+border-radius:50%;
+
+background:white;
+
+cursor:pointer;
+
+font-size:20px;
+
+box-shadow:0 5px 15px rgba(0,0,0,.2);
+
+}
+
+/* ==========================
+Dark Theme
+========================== */
+
+body.dark{
+
+background:#0f172a;
+
+color:#f8fafc;
+
+}
+
+body.dark .card{
+
+background:#1e293b;
+
+color:white;
+
+}
+
+body.dark section h2{
+
+color:white;
+
+}
+
+body.dark .skill-box span{
+
+background:#334155;
+
+}
+
+body.dark footer{
+
+background:#020617;
+
+}
