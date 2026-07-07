@@ -1,176 +1,922 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mohamed Fayez | Portfolio CV</title>
+<title>Mohamed Fayez | Portfolio</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+<meta name="description"
+content="Professional Portfolio of Mohamed Fayez | General Accountant | Revenue Accountant | Banking & Foreign Exchange Specialist">
 
-<link rel="stylesheet" href="style.css">
+<meta name="keywords"
+content="Mohamed Fayez, Accountant, Revenue Accountant, Banking, Portfolio, Egypt, Luxor">
+
+<meta name="author" content="Mohamed Fayez">
+
+<meta property="og:title" content="Mohamed Fayez Portfolio">
+
+<meta property="og:description"
+content="Professional Accountant Portfolio">
+
+<meta property="og:image"
+content="assets/profile.jpg">
+
+<meta property="og:type" content="website">
+
+<meta property="og:url"
+content="https://YOUR_USERNAME.github.io/">
+
+<meta name="theme-color"
+content="#0f172a">
+
+<link rel="icon"
+href="assets/favicon.png">
+
+<link rel="preconnect"
+href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+href="https://fonts.gstatic.com"
+crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap"
+rel="stylesheet">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+<link rel="stylesheet"
+href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+<link rel="stylesheet"
+href="style.css">
+
 </head>
 
 <body>
 
-<div class="top-actions">
+<div id="loader">
 
-<button id="langBtn">EN</button>
+<div class="spinner"></div>
 
-<button id="themeBtn">🌙</button>
+<h2>Mohamed Fayez</h2>
 
 </div>
 
-<header class="hero">
+<div id="progressBar"></div>
 
-<div class="hero-content">
+<div class="background">
 
-<img src="profile.jpg" class="profile-img" alt="Mohamed Fayez">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+<span></span>
 
-<h1 data-ar="محمد فايز أبو الحسن سعيد"
-data-en="Mohamed Fayez Aboulhassan Saeed">
+</div>
+
+<nav>
+
+<div class="logo">
+
+MF
+
+</div>
+
+<ul id="menu">
+
+<li><a href="#home"
+data-ar="الرئيسية"
+data-en="Home">
+الرئيسية
+</a></li>
+
+<li><a href="#about"
+data-ar="نبذة"
+data-en="About">
+نبذة
+</a></li>
+
+<li><a href="#experience"
+data-ar="الخبرات"
+data-en="Experience">
+الخبرات
+</a></li>
+
+<li><a href="#skills"
+data-ar="المهارات"
+data-en="Skills">
+المهارات
+</a></li>
+
+<li><a href="#education"
+data-ar="التعليم"
+data-en="Education">
+التعليم
+</a></li>
+
+<li><a href="#contact"
+data-ar="التواصل"
+data-en="Contact">
+التواصل
+</a></li>
+
+</ul>
+
+<div class="nav-buttons">
+
+<button id="langBtn">
+
+EN
+
+</button>
+
+<button id="themeBtn">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+<section id="home">
+
+<div class="glass hero">
+
+<div class="hero-left"
+data-aos="fade-right">
+
+<img
+src="assets/profile.jpg"
+alt="Mohamed Fayez"
+class="profile">
+
+</div>
+
+<div class="hero-right"
+data-aos="fade-left">
+
+<h3
+data-ar="مرحباً 👋"
+data-en="Hello 👋">
+
+مرحباً 👋
+
+</h3>
+
+<h1>
+
 محمد فايز أبو الحسن سعيد
+
 </h1>
 
-<h2 data-ar="محاسب عام | محاسب إيرادات | صراف"
-data-en="General Accountant | Revenue Accountant | Teller">
-محاسب عام | محاسب إيرادات | صراف
+<h2 class="typing">
+
 </h2>
 
-<p data-ar="خبرة في المحاسبة والإيرادات والخدمات المصرفية والصرافة."
-data-en="Experienced in Accounting, Revenue Management, Banking Services and Foreign Exchange.">
-خبرة في المحاسبة والإيرادات والخدمات المصرفية والصرافة.
+<p
+data-ar="محاسب عام • محاسب إيرادات • صراف • خبرة في البنوك والفنادق والمقاولات"
+data-en="General Accountant • Revenue Accountant • Teller • Banking & Hospitality Experience">
+
+محاسب عام • محاسب إيرادات • صراف • خبرة في البنوك والفنادق والمقاولات
+
 </p>
 
-<div class="contact">
+<div class="hero-buttons">
 
-<span>📍 Luxor, Egypt</span>
+<a
+href="assets/cv.pdf"
+target="_blank"
+class="btn">
 
-<span>📞 01018430247</span>
+<i class="fa-solid fa-file-arrow-down"></i>
 
-<span>📞 01114493537</span>
+<span
+data-ar="تحميل السيرة الذاتية"
+data-en="Download CV">
 
-</div>
+تحميل السيرة الذاتية
 
-<a href="cv.pdf" class="download-btn" target="_blank">
-📄 Download CV
+</span>
+
+</a>
+
+<a
+href="tel:01018430247"
+class="btn secondary">
+
+<i class="fa-solid fa-phone"></i>
+
+اتصل
+
+</a>
+
+<a
+href="mailto:example@gmail.com"
+class="btn secondary">
+
+<i class="fa-solid fa-envelope"></i>
+
+Email
+
 </a>
 
 </div>
 
-</header>
+<div class="social">
 
-<section class="section">
+<a href="#"><i class="fab fa-linkedin"></i></a>
 
-<h3 data-ar="الملخص المهني"
-data-en="Professional Summary">
-الملخص المهني
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="#"><i class="fab fa-github"></i></a>
+
+<a href="https://wa.me/201018430247">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+  <!-- ================= ABOUT ================= -->
+
+<section id="about">
+
+<div class="container">
+
+<h2 class="section-title"
+data-aos="fade-up"
+data-ar="نبذة عني"
+data-en="About Me">
+
+نبذة عني
+
+</h2>
+
+<div class="about-grid">
+
+<div class="glass about-text"
+data-aos="fade-right">
+
+<p
+data-ar="محاسب عام ومحاسب إيرادات أمتلك خبرة عملية في المحاسبة المالية وإدارة الإيرادات والخدمات المصرفية والصرافة. أتميز بالدقة في إعداد القيود المحاسبية والتسويات البنكية وإعداد التقارير المالية وتحليل البيانات، مع القدرة على العمل تحت الضغط والالتزام بالسياسات والإجراءات."
+data-en="General Accountant and Revenue Accountant with professional experience in accounting, revenue management, banking services and foreign exchange. Skilled in journal entries, bank reconciliation, financial reporting and data analysis with strong attention to detail.">
+
+محاسب عام ومحاسب إيرادات أمتلك خبرة عملية في المحاسبة المالية وإدارة الإيرادات والخدمات المصرفية والصرافة.
+
+</p>
+
+</div>
+
+<div class="stats">
+
+<div class="glass stat"
+data-aos="zoom-in">
+
+<h3 class="counter"
+data-target="4">
+
+0
+
 </h3>
 
 <p
-data-ar="محاسب عام ومحاسب إيرادات يتمتع بخبرة في إعداد القيود المحاسبية والتسويات البنكية وإعداد التقارير المالية وإدارة الإيرادات بالفنادق والمطاعم والكافيهات، بالإضافة إلى الخبرة في الصرافة والخدمات المصرفية."
-data-en="General Accountant and Revenue Accountant with experience in journal entries, bank reconciliations, financial reporting, hotel revenue management, banking services and foreign exchange operations.">
-محاسب عام ومحاسب إيرادات يتمتع بخبرة في إعداد القيود المحاسبية والتسويات البنكية وإعداد التقارير المالية وإدارة الإيرادات بالفنادق والمطاعم والكافيهات، بالإضافة إلى الخبرة في الصرافة والخدمات المصرفية.
+data-ar="سنوات خبرة"
+data-en="Years Experience">
+
+سنوات خبرة
+
 </p>
 
+</div>
+
+<div class="glass stat"
+data-aos="zoom-in"
+data-aos-delay="150">
+
+<h3 class="counter"
+data-target="4">
+
+0
+
+</h3>
+
+<p
+data-ar="شركات"
+data-en="Companies">
+
+شركات
+
+</p>
+
+</div>
+
+<div class="glass stat"
+data-aos="zoom-in"
+data-aos-delay="300">
+
+<h3 class="counter"
+data-target="8">
+
+0
+
+</h3>
+
+<p
+data-ar="مهارات رئيسية"
+data-en="Core Skills">
+
+مهارات رئيسية
+
+</p>
+
+</div>
+
+<div class="glass stat"
+data-aos="zoom-in"
+data-aos-delay="450">
+
+<h3>
+
+100%
+
+</h3>
+
+<p
+data-ar="الالتزام"
+data-en="Commitment">
+
+الالتزام
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
 </section>
 
-<section class="section">
+<!-- ================= EXPERIENCE ================= -->
 
-<h3 data-ar="الخبرات العملية"
+<section id="experience">
+
+<div class="container">
+
+<h2 class="section-title"
+data-aos="fade-up"
+data-ar="الخبرات العملية"
 data-en="Work Experience">
+
 الخبرات العملية
+
+</h2>
+
+<div class="timeline">
+
+<!-- Job 1 -->
+
+<div class="timeline-item"
+data-aos="fade-left">
+
+<div class="timeline-dot"></div>
+
+<div class="glass timeline-content">
+
+<span class="date">
+
+2025 - Present
+
+</span>
+
+<h3>
+
+صراف
+
 </h3>
 
-<div class="card">
+<h4>
 
-<h4 data-ar="محاسب عام - شركة الصعيد العامة للمقاولات والاستثمار العقاري"
-data-en="General Accountant - El Saeed General Contracting & Real Estate">
-محاسب عام
+البنك الأهلي المصري للصرافة
+
 </h4>
 
-<p>2021 - 2022</p>
+<ul>
+
+<li>تنفيذ معاملات صرف العملات الأجنبية.</li>
+
+<li>التأكد من صحة العمليات المالية.</li>
+
+<li>تطبيق سياسات مكافحة غسل الأموال.</li>
+
+<li>الالتزام بإجراءات البنك ومعايير الجودة.</li>
+
+</ul>
 
 </div>
 
-<div class="card">
-
-<h4 data-ar="محاسب إيرادات - فندق البالسيو بالغردقة"
-data-en="Revenue Accountant - Palacio Hotel Hurghada">
-محاسب إيرادات
-</h4>
-
-<p>2022 - 2023</p>
-
 </div>
 
-<div class="card">
+<!-- Job 2 -->
 
-<h4 data-ar="موظف خدمة عملاء - بنك قطر الأهلي الوطني"
-data-en="Customer Service Officer - QNB">
+<div class="timeline-item"
+data-aos="fade-right">
+
+<div class="timeline-dot"></div>
+
+<div class="glass timeline-content">
+
+<span class="date">
+
+2023 - 2025
+
+</span>
+
+<h3>
+
 موظف خدمة عملاء
+
+</h3>
+
+<h4>
+
+QNB الأهلي
+
 </h4>
 
-<p>2023 - 2025</p>
+<ul>
+
+<li>تقديم الخدمات المصرفية للأفراد.</li>
+
+<li>استقبال طلبات العملاء.</li>
+
+<li>حل المشكلات والشكاوى.</li>
+
+<li>الالتزام بسياسات مكافحة غسل الأموال.</li>
+
+<li>تقديم تجربة عملاء احترافية.</li>
+
+</ul>
 
 </div>
 
-<div class="card">
+</div>
 
-<h4 data-ar="صراف - صرافة البنك الأهلي المصري"
-data-en="Teller - National Bank of Egypt Exchange">
-صراف
+<!-- Job 3 -->
+
+<div class="timeline-item"
+data-aos="fade-left">
+
+<div class="timeline-dot"></div>
+
+<div class="glass timeline-content">
+
+<span class="date">
+
+2022 - 2023
+
+</span>
+
+<h3>
+
+محاسب إيرادات
+
+</h3>
+
+<h4>
+
+Palacio Hotel Hurghada
+
 </h4>
 
-<p>2025 - Present</p>
+<ul>
+
+<li>مراجعة الإيرادات اليومية.</li>
+
+<li>تسجيل إيرادات المطاعم والكافيهات.</li>
+
+<li>مراجعة تقارير POS.</li>
+
+<li>مطابقة الإيرادات والتحصيلات.</li>
+
+<li>تحليل الفروقات ومعالجتها.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+<!-- Job 4 -->
+
+<div class="timeline-item"
+data-aos="fade-right">
+
+<div class="timeline-dot"></div>
+
+<div class="glass timeline-content">
+
+<span class="date">
+
+2021 - 2022
+
+</span>
+
+<h3>
+
+محاسب عام
+
+</h3>
+
+<h4>
+
+شركة الصعيد العامة للمقاولات والاستثمار العقاري
+
+</h4>
+
+<ul>
+
+<li>تسجيل القيود اليومية.</li>
+
+<li>إعداد التسويات المحاسبية.</li>
+
+<li>متابعة العملاء والموردين.</li>
+
+<li>إعداد التقارير المالية.</li>
+
+<li>المطابقة البنكية.</li>
+
+<li>مراجعة الحسابات.</li>
+
+<li>متابعة الإيرادات والمصروفات.</li>
+
+<li>المساهمة في إعداد القوائم المالية.</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
+<!-- ================= SKILLS ================= -->
 
-<section class="section">
+<section id="skills">
 
-<h3 data-ar="المهارات"
+<div class="container">
+
+<h2 class="section-title"
+data-aos="fade-up"
+data-ar="المهارات"
 data-en="Skills">
-المهارات
-</h3>
 
-<div class="skills">
+المهارات
+
+</h2>
+
+<div class="skills-grid">
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
 
 <span>Accounting</span>
-<span>Financial Reports</span>
-<span>ERP</span>
-<span>SAP</span>
-<span>Microsoft Excel</span>
+
+<span>95%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="95"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
 <span>Revenue Management</span>
+
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="90"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
+<span>Microsoft Excel</span>
+
+<span>95%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="95"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
+<span>SAP ERP</span>
+
+<span>80%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="80"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
 <span>Bank Reconciliation</span>
+
+<span>92%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="92"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
+<span>Financial Reporting</span>
+
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="90"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
 <span>Customer Service</span>
+
+<span>95%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="95"></div>
+
+</div>
+
+</div>
+
+<div class="glass skill-card" data-aos="zoom-in">
+
+<div class="skill-header">
+
+<span>Foreign Exchange</span>
+
+<span>90%</span>
+
+</div>
+
+<div class="progress">
+
+<div class="progress-bar" data-width="90"></div>
+
+</div>
+
+</div>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section">
+<!-- ================= EDUCATION ================= -->
 
-<h3 data-ar="التعليم"
-data-en="Education">
-التعليم
+<section id="education">
+
+<div class="container">
+
+<h2 class="section-title"
+data-aos="fade-up">
+
+Education
+
+</h2>
+
+<div class="glass education-card"
+data-aos="fade-up">
+
+<i class="fa-solid fa-graduation-cap edu-icon"></i>
+
+<h3>
+
+Bachelor of Commerce
+
 </h3>
 
-<div class="card">
+<h4>
 
-<h4
-data-ar="بكالوريوس تجارة - قسم المحاسبة"
-data-en="Bachelor of Commerce - Accounting">
-بكالوريوس تجارة - قسم المحاسبة
+Accounting Department
+
 </h4>
 
-<p
-data-ar="جامعة جنوب الوادي - 2021"
-data-en="South Valley University - 2021">
-جامعة جنوب الوادي - 2021
+<p>
+
+South Valley University
+
 </p>
+
+<span>
+
+Graduation : May 2021
+
+</span>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= LANGUAGES ================= -->
+
+<section id="languages">
+
+<div class="container">
+
+<h2 class="section-title"
+data-aos="fade-up">
+
+Languages
+
+</h2>
+
+<div class="languages-grid">
+
+<div class="glass lang-card">
+
+<h3>
+
+Arabic
+
+</h3>
+
+<p>
+
+Native
+
+</p>
+
+</div>
+
+<div class="glass lang-card">
+
+<h3>
+
+English
+
+</h3>
+
+<p>
+
+Excellent
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<div class="container">
+
+<h2 class="section-title">
+
+Contact Me
+
+</h2>
+
+<div class="contact-grid">
+
+<div class="glass contact-card">
+
+<i class="fa-solid fa-location-dot"></i>
+
+<h3>
+
+Location
+
+</h3>
+
+<p>
+
+Luxor, Egypt
+
+</p>
+
+</div>
+
+<div class="glass contact-card">
+
+<i class="fa-solid fa-phone"></i>
+
+<h3>
+
+Phone
+
+</h3>
+
+<p>
+
+01018430247
+
+</p>
+
+<p>
+
+01114493537
+
+</p>
+
+</div>
+
+<div class="glass contact-card">
+
+<i class="fa-solid fa-envelope"></i>
+
+<h3>Email</h3>
+
+<p>
+
+maohammedfayez92@gmail.com
+
+</p>
+
+</div>
+
+</div>
 
 </div>
 
@@ -178,11 +924,60 @@ data-en="South Valley University - 2021">
 
 <footer>
 
-<p>© 2026 Mohamed Fayez</p>
+<div class="container">
+
+<h2>
+
+Mohamed Fayez
+
+</h2>
+
+<p>
+
+General Accountant • Revenue Accountant • Banking Professional
+
+</p>
+
+<div class="footer-social">
+
+<a href="#"><i class="fab fa-linkedin"></i></a>
+
+<a href="#"><i class="fab fa-facebook"></i></a>
+
+<a href="https://wa.me/201018430247">
+
+<i class="fab fa-whatsapp"></i>
+
+</a>
+
+<a href="tel:01018430247">
+
+<i class="fa-solid fa-phone"></i>
+
+</a>
+
+</div>
+
+<p class="copyright">
+
+© 2026 Mohamed Fayez Portfolio
+
+</p>
+
+</div>
 
 </footer>
+
+<button id="topBtn">
+
+<i class="fa-solid fa-arrow-up"></i>
+
+</button>
+
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
