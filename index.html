@@ -1,132 +1,42 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>محمد فايز أبو الحسن سعيد — السيرة الذاتية</title>
-<meta name="description" content="محاسب عام ومحاسب إيرادات — Mohamed Fayez Abo El-Hassan Saeed, General & Revenue Accountant">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Amiri:wght@400;700&family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
+const themeBtn = document.getElementById("themeBtn");
+const langBtn = document.getElementById("langBtn");
 
-<!-- ===== Passbook cover / header ===== -->
-<header class="cover" id="cover">
-  <div class="cover__texture" aria-hidden="true"></div>
+themeBtn.onclick = () => {
+document.body.classList.toggle("dark");
 
-  <div class="cover__top">
-    <div class="brand-mark" aria-hidden="true">
-      <svg viewBox="0 0 40 40" class="brand-mark__icon"><path d="M8 30 L8 14 L20 6 L32 14 L32 30" fill="none" stroke="currentColor" stroke-width="1.6"/><line x1="4" y1="30" x2="36" y2="30" stroke="currentColor" stroke-width="1.6"/><line x1="14" y1="30" x2="14" y2="18" stroke="currentColor" stroke-width="1.2"/><line x1="20" y1="30" x2="20" y2="18" stroke="currentColor" stroke-width="1.2"/><line x1="26" y1="30" x2="26" y2="18" stroke="currentColor" stroke-width="1.2"/></svg>
-      <span class="brand-mark__label" data-i18n="ledgerLabel">دفتر السيرة الذاتية</span>
-    </div>
+localStorage.setItem(
+"theme",
+document.body.classList.contains("dark")
+? "dark"
+: "light"
+);
+};
 
-    <div class="controls">
-      <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
-        <span class="lang-toggle__opt" data-lang="ar">AR</span>
-        <span class="lang-toggle__div">/</span>
-        <span class="lang-toggle__opt" data-lang="en">EN</span>
-      </button>
-      <button class="print-btn" id="printBtn" type="button" data-i18n="printBtn">طباعة</button>
-    </div>
-  </div>
+if(localStorage.getItem("theme")==="dark"){
+document.body.classList.add("dark");
+}
 
-  <div class="cover__main">
-    <div class="portrait-wrap">
-      <img src="assets/photo.png" alt="Mohamed Fayez" class="portrait" id="portraitImg">
-      <svg class="stamp" viewBox="0 0 200 200" aria-hidden="true">
-        <defs>
-          <path id="stampCircleTop" d="M 100,100 m -80,0 a 80,80 0 1,1 160,0 a 80,80 0 1,1 -160,0"></path>
-        </defs>
-        <circle cx="100" cy="100" r="92" class="stamp__ring-outer"/>
-        <circle cx="100" cy="100" r="68" class="stamp__ring-inner"/>
-        <text class="stamp__text" id="stampTextTop">
-          <textPath href="#stampCircleTop" startOffset="0%" id="stampTextPath">MOHAMED FAYEZ • CERTIFIED ACCOUNTANT • </textPath>
-        </text>
-        <text x="100" y="93" text-anchor="middle" class="stamp__center-1" id="stampCenter1">EST.</text>
-        <text x="100" y="118" text-anchor="middle" class="stamp__center-2" id="stampCenter2">2021</text>
-      </svg>
-    </div>
+let currentLang="ar";
 
-    <div class="identity">
-      <p class="identity__eyebrow" data-i18n="eyebrow">الملف الشخصي — الصفحة ٠١</p>
-      <h1 class="identity__name" id="nameHeading">محمد فايز أبو الحسن سعيد</h1>
-      <p class="identity__title" data-i18n="jobTitle">محاسب عام | محاسب إيرادات</p>
+langBtn.onclick=()=>{
 
-      <ul class="identity__meta">
-        <li><span class="meta-icon" aria-hidden="true">☎</span><span dir="ltr">01018430247 / 01114493537</span></li>
-        <li><span class="meta-icon" aria-hidden="true">⌂</span><span data-i18n="location">محافظة الأقصر، مصر</span></li>
-        <li><span class="meta-icon" aria-hidden="true">✎</span><span data-i18n="maritalStatus">متزوج</span></li>
-      </ul>
-    </div>
-  </div>
+currentLang=currentLang==="ar"?"en":"ar";
 
-  <div class="cover__ledger-edge" aria-hidden="true">
-    <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
-  </div>
-</header>
+document.documentElement.lang=currentLang;
 
-<!-- ===== Pages ===== -->
-<main class="pages">
+document.documentElement.dir=
+currentLang==="ar"?"rtl":"ltr";
 
-  <!-- Summary -->
-  <section class="page" id="page-summary">
-    <div class="page__tab">
-      <span class="page__tab-index">01</span>
-      <span class="page__tab-label" data-i18n="tabSummary">الملخص المهني</span>
-    </div>
-    <p class="summary-text" id="summaryText" data-i18n="summaryText"></p>
-  </section>
+langBtn.innerText=
+currentLang==="ar"?"EN":"AR";
 
-  <!-- Experience -->
-  <section class="page" id="page-experience">
-    <div class="page__tab">
-      <span class="page__tab-index">02</span>
-      <span class="page__tab-label" data-i18n="tabExperience">الخبرة العملية</span>
-    </div>
-    <div class="ledger" id="experienceLedger"></div>
-  </section>
+document.querySelectorAll("[data-ar]").forEach(el=>{
 
-  <!-- Education -->
-  <section class="page" id="page-education">
-    <div class="page__tab">
-      <span class="page__tab-index">03</span>
-      <span class="page__tab-label" data-i18n="tabEducation">التعليم</span>
-    </div>
-    <div class="ledger" id="educationLedger"></div>
-  </section>
+el.innerText=
+currentLang==="ar"
+? el.dataset.ar
+: el.dataset.en;
 
-  <!-- Skills -->
-  <section class="page" id="page-skills">
-    <div class="page__tab">
-      <span class="page__tab-index">04</span>
-      <span class="page__tab-label" data-i18n="tabSkills">المهارات</span>
-    </div>
+});
 
-    <div class="skills-grid">
-      <div class="skills-col">
-        <h3 class="skills-col__title" data-i18n="skillsTechnicalTitle">المهارات التقنية</h3>
-        <ul class="chip-list" id="technicalSkillsList"></ul>
-      </div>
-      <div class="skills-col">
-        <h3 class="skills-col__title" data-i18n="skillsPersonalTitle">المهارات الشخصية</h3>
-        <ul class="chip-list" id="personalSkillsList"></ul>
-      </div>
-      <div class="skills-col">
-        <h3 class="skills-col__title" data-i18n="skillsLanguagesTitle">اللغات</h3>
-        <ul class="chip-list" id="languagesList"></ul>
-      </div>
-    </div>
-  </section>
-
-</main>
-
-<footer class="site-footer">
-  <p data-i18n="footerNote">تم إعداد هذه السيرة الذاتية رقمياً — للتواصل عبر الأرقام أعلاه</p>
-  <p class="site-footer__brand">M.F.A.</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
-</html>
+};
