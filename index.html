@@ -1,42 +1,188 @@
-const themeBtn = document.getElementById("themeBtn");
-const langBtn = document.getElementById("langBtn");
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-themeBtn.onclick = () => {
-document.body.classList.toggle("dark");
+<title>Mohamed Fayez | Portfolio CV</title>
 
-localStorage.setItem(
-"theme",
-document.body.classList.contains("dark")
-? "dark"
-: "light"
-);
-};
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-if(localStorage.getItem("theme")==="dark"){
-document.body.classList.add("dark");
-}
+<link rel="stylesheet" href="style.css">
+</head>
 
-let currentLang="ar";
+<body>
 
-langBtn.onclick=()=>{
+<div class="top-actions">
 
-currentLang=currentLang==="ar"?"en":"ar";
+<button id="langBtn">EN</button>
 
-document.documentElement.lang=currentLang;
+<button id="themeBtn">🌙</button>
 
-document.documentElement.dir=
-currentLang==="ar"?"rtl":"ltr";
+</div>
 
-langBtn.innerText=
-currentLang==="ar"?"EN":"AR";
+<header class="hero">
 
-document.querySelectorAll("[data-ar]").forEach(el=>{
+<div class="hero-content">
 
-el.innerText=
-currentLang==="ar"
-? el.dataset.ar
-: el.dataset.en;
+<img src="profile.jpg" class="profile-img" alt="Mohamed Fayez">
 
-});
+<h1 data-ar="محمد فايز أبو الحسن سعيد"
+data-en="Mohamed Fayez Aboulhassan Saeed">
+محمد فايز أبو الحسن سعيد
+</h1>
 
-};
+<h2 data-ar="محاسب عام | محاسب إيرادات | صراف"
+data-en="General Accountant | Revenue Accountant | Teller">
+محاسب عام | محاسب إيرادات | صراف
+</h2>
+
+<p data-ar="خبرة في المحاسبة والإيرادات والخدمات المصرفية والصرافة."
+data-en="Experienced in Accounting, Revenue Management, Banking Services and Foreign Exchange.">
+خبرة في المحاسبة والإيرادات والخدمات المصرفية والصرافة.
+</p>
+
+<div class="contact">
+
+<span>📍 Luxor, Egypt</span>
+
+<span>📞 01018430247</span>
+
+<span>📞 01114493537</span>
+
+</div>
+
+<a href="cv.pdf" class="download-btn" target="_blank">
+📄 Download CV
+</a>
+
+</div>
+
+</header>
+
+<section class="section">
+
+<h3 data-ar="الملخص المهني"
+data-en="Professional Summary">
+الملخص المهني
+</h3>
+
+<p
+data-ar="محاسب عام ومحاسب إيرادات يتمتع بخبرة في إعداد القيود المحاسبية والتسويات البنكية وإعداد التقارير المالية وإدارة الإيرادات بالفنادق والمطاعم والكافيهات، بالإضافة إلى الخبرة في الصرافة والخدمات المصرفية."
+data-en="General Accountant and Revenue Accountant with experience in journal entries, bank reconciliations, financial reporting, hotel revenue management, banking services and foreign exchange operations.">
+محاسب عام ومحاسب إيرادات يتمتع بخبرة في إعداد القيود المحاسبية والتسويات البنكية وإعداد التقارير المالية وإدارة الإيرادات بالفنادق والمطاعم والكافيهات، بالإضافة إلى الخبرة في الصرافة والخدمات المصرفية.
+</p>
+
+</section>
+
+<section class="section">
+
+<h3 data-ar="الخبرات العملية"
+data-en="Work Experience">
+الخبرات العملية
+</h3>
+
+<div class="card">
+
+<h4 data-ar="محاسب عام - شركة الصعيد العامة للمقاولات والاستثمار العقاري"
+data-en="General Accountant - El Saeed General Contracting & Real Estate">
+محاسب عام
+</h4>
+
+<p>2021 - 2022</p>
+
+</div>
+
+<div class="card">
+
+<h4 data-ar="محاسب إيرادات - فندق البالسيو بالغردقة"
+data-en="Revenue Accountant - Palacio Hotel Hurghada">
+محاسب إيرادات
+</h4>
+
+<p>2022 - 2023</p>
+
+</div>
+
+<div class="card">
+
+<h4 data-ar="موظف خدمة عملاء - بنك قطر الأهلي الوطني"
+data-en="Customer Service Officer - QNB">
+موظف خدمة عملاء
+</h4>
+
+<p>2023 - 2025</p>
+
+</div>
+
+<div class="card">
+
+<h4 data-ar="صراف - صرافة البنك الأهلي المصري"
+data-en="Teller - National Bank of Egypt Exchange">
+صراف
+</h4>
+
+<p>2025 - Present</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h3 data-ar="المهارات"
+data-en="Skills">
+المهارات
+</h3>
+
+<div class="skills">
+
+<span>Accounting</span>
+<span>Financial Reports</span>
+<span>ERP</span>
+<span>SAP</span>
+<span>Microsoft Excel</span>
+<span>Revenue Management</span>
+<span>Bank Reconciliation</span>
+<span>Customer Service</span>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h3 data-ar="التعليم"
+data-en="Education">
+التعليم
+</h3>
+
+<div class="card">
+
+<h4
+data-ar="بكالوريوس تجارة - قسم المحاسبة"
+data-en="Bachelor of Commerce - Accounting">
+بكالوريوس تجارة - قسم المحاسبة
+</h4>
+
+<p
+data-ar="جامعة جنوب الوادي - 2021"
+data-en="South Valley University - 2021">
+جامعة جنوب الوادي - 2021
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mohamed Fayez</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
