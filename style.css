@@ -1002,7 +1002,6 @@ display:none;
 /*==================================================
 TIMELINE
 ==================================================*/
-
 .timeline{
 
 position:relative;
@@ -1010,8 +1009,6 @@ position:relative;
 max-width:1100px;
 
 margin:auto;
-
-padding:30px 0;
 
 }
 
@@ -1029,23 +1026,9 @@ width:4px;
 
 height:100%;
 
-background:linear-gradient(
-
-180deg,
-
-transparent,
-
-var(--primary),
-
-#06b6d4,
-
-transparent
-
-);
+background:#2563eb;
 
 transform:translateX(-50%);
-
-border-radius:20px;
 
 }
 
@@ -1053,27 +1036,25 @@ border-radius:20px;
 
 position:relative;
 
-width:50%;
+width:calc(50% - 40px);
 
-padding:20px 45px;
-
-margin-bottom:60px;
+margin-bottom:50px;
 
 }
 
 .timeline-item:nth-child(odd){
 
-left:0;
+margin-right:auto;
 
-text-align:right;
+padding-right:40px;
 
 }
 
 .timeline-item:nth-child(even){
 
-left:50%;
+margin-left:auto;
 
-text-align:left;
+padding-left:40px;
 
 }
 
@@ -1081,153 +1062,29 @@ text-align:left;
 
 position:absolute;
 
-top:38px;
+top:35px;
 
-right:-14px;
+width:22px;
 
-width:28px;
+height:22px;
 
-height:28px;
+background:#2563eb;
 
 border-radius:50%;
 
-background:var(--primary);
+z-index:2;
 
-border:5px solid rgba(255,255,255,.15);
+}
 
-box-shadow:
+.timeline-item:nth-child(odd) .timeline-dot{
 
-0 0 25px rgba(37,99,235,.6);
-
-animation:pulse 2s infinite;
+right:-11px;
 
 }
 
 .timeline-item:nth-child(even) .timeline-dot{
 
-left:-14px;
-
-}
-
-@keyframes pulse{
-
-0%{
-
-box-shadow:0 0 0 0 rgba(37,99,235,.7);
-
-}
-
-70%{
-
-box-shadow:0 0 0 18px rgba(37,99,235,0);
-
-}
-
-100%{
-
-box-shadow:0 0 0 0 rgba(37,99,235,0);
-
-}
-
-}
-
-.timeline-content{
-
-padding:30px;
-
-border-radius:22px;
-
-transition:.35s;
-
-position:relative;
-
-overflow:hidden;
-
-}
-
-.timeline-content::before{
-
-content:"";
-
-position:absolute;
-
-width:220px;
-
-height:220px;
-
-background:rgba(59,130,246,.15);
-
-border-radius:50%;
-
-top:-120px;
-
-right:-120px;
-
-transition:.4s;
-
-}
-
-.timeline-content:hover::before{
-
-transform:scale(1.6);
-
-}
-
-.timeline-content:hover{
-
-transform:translateY(-10px);
-
-}
-
-.timeline-content h3{
-
-font-size:28px;
-
-margin:15px 0 5px;
-
-}
-
-.timeline-content h4{
-
-font-size:18px;
-
-color:var(--secondary);
-
-margin-bottom:18px;
-
-}
-
-.timeline-content ul{
-
-padding-inline-start:18px;
-
-line-height:2;
-
-color:var(--text);
-
-}
-
-.timeline-content li{
-
-margin-bottom:8px;
-
-}
-
-.date{
-
-display:inline-block;
-
-padding:8px 16px;
-
-background:var(--primary);
-
-color:white;
-
-border-radius:30px;
-
-font-size:14px;
-
-font-weight:700;
+left:-11px;
 
 }
 
