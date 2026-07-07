@@ -167,3 +167,17 @@ langBtn.onclick = () => {
     english = !english;
 
 };
+
+// =========================
+// Mobile Menu
+// =========================
+
+const menuBtn=document.getElementById("menuBtn");
+
+const menu=document.getElementById("menu");
+
+menuBtn.onclick=()=>{
+
+menu.classList.toggle("active");
+
+}
