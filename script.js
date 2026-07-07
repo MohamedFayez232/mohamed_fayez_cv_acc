@@ -1,14 +1,68 @@
 // =========================
-// Fade In Animation
+// Dark Mode
 // =========================
 
-const cards = document.querySelectorAll(".card");
+const themeBtn = document.getElementById("themeBtn");
 
-const observer = new IntersectionObserver((entries) => {
+themeBtn.addEventListener("click", () => {
+
+    document.body.classList.toggle("dark");
+
+    if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem("theme", "dark");
+
+        themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+    } else {
+
+        localStorage.setItem("theme", "light");
+
+        themeBtn.innerHTML = '<i class="fa-solid fa-moon"></i>';
+
+    }
+
+});
+
+if (localStorage.getItem("theme") === "dark") {
+
+    document.body.classList.add("dark");
+
+    themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+
+}
+
+// =========================
+// Sticky Navbar
+// =========================
+
+window.addEventListener("scroll", () => {
+
+    const nav = document.querySelector(".navbar");
+
+    if (window.scrollY > 60) {
+
+        nav.style.padding = "15px 8%";
+        nav.style.boxShadow = "0 10px 35px rgba(0,0,0,.15)";
+
+    } else {
+
+        nav.style.padding = "";
+        nav.style.boxShadow = "";
+
+    }
+
+});
+
+// =========================
+// Reveal Animation
+// =========================
+
+const observer = new IntersectionObserver(entries => {
 
     entries.forEach(entry => {
 
-        if(entry.isIntersecting){
+        if (entry.isIntersecting) {
 
             entry.target.classList.add("show");
 
@@ -16,82 +70,100 @@ const observer = new IntersectionObserver((entries) => {
 
     });
 
+}, {
+
+    threshold: .2
+
 });
 
-cards.forEach(card=>{
+document.querySelectorAll(".timeline-item,.skill-card,.education-card,.contact-grid div").forEach(el => {
 
-    observer.observe(card);
+    el.classList.add("hidden");
+
+    observer.observe(el);
 
 });
 
 // =========================
-// Back To Top Button
+// Back To Top
 // =========================
 
 const topBtn = document.createElement("button");
 
-topBtn.innerHTML="↑";
+topBtn.id = "topBtn";
 
-topBtn.id="topBtn";
+topBtn.innerHTML = '<i class="fa-solid fa-arrow-up"></i>';
 
 document.body.appendChild(topBtn);
 
-window.addEventListener("scroll",()=>{
+window.addEventListener("scroll", () => {
 
-    if(window.scrollY>300){
-
-        topBtn.style.display="block";
-
-    }else{
-
-        topBtn.style.display="none";
-
-    }
+    topBtn.style.display = window.scrollY > 300 ? "flex" : "none";
 
 });
 
-topBtn.onclick=()=>{
+topBtn.onclick = () => {
 
     window.scrollTo({
 
-        top:0,
+        top: 0,
 
-        behavior:"smooth"
+        behavior: "smooth"
 
     });
 
 };
 
 // =========================
-// Dark Mode
+// Typing Effect
 // =========================
 
-const darkBtn=document.createElement("button");
+const title = document.querySelector(".hero h2");
 
-darkBtn.innerHTML='<i class="fa-solid fa-moon"></i>';
+const text = title.innerHTML;
 
-darkBtn.id="darkMode";
+title.innerHTML = "";
 
-document.body.appendChild(darkBtn);
+let i = 0;
 
-darkBtn.onclick=()=>{
+function typing() {
 
-    document.body.classList.toggle("dark");
+    if (i < text.length) {
 
-    localStorage.setItem("theme",
+        title.innerHTML += text.charAt(i);
 
-        document.body.classList.contains("dark")
+        i++;
 
-        ?"dark"
+        setTimeout(typing, 35);
 
-        :"light"
-
-    );
-
-};
-
-if(localStorage.getItem("theme")==="dark"){
-
-    document.body.classList.add("dark");
+    }
 
 }
+
+typing();
+
+// =========================
+// Language Toggle (Basic)
+// =========================
+
+const langBtn = document.getElementById("langBtn");
+
+let english = true;
+
+langBtn.onclick = () => {
+
+    if (english) {
+
+        langBtn.innerHTML = "🇪🇬 AR";
+
+        alert("سيتم إضافة النسخة العربية بالكامل في الإصدار القادم.");
+
+    } else {
+
+        langBtn.innerHTML = "🇺🇸 EN";
+
+    }
+
+    english = !english;
+
+};
